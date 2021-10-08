@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var selection = CurrentPage.Children.Where("Visible").OrderBy("CreateDate desc");
+    @* OrderBy() takes the property to sort by and optionally order desc/asc *@
+    
+}
+
+@foreach (var item in selection)
+
+
+{   <div class="section-macro-prin" >
+		<a href="@item.Url"><h4 class="notice-title-macro">@(Umbraco.Truncate(item.GetPropertyValue<string>("articleTitle"), 100))	</h4></a>
+			<div class="section-macro">
+				<div class="section-img-macjjjro">
+                        <a class="texto-enlace" href="@item.Url">
+                            @(Umbraco.Truncate(item.GetPropertyValue("Photo"), 100))
+					    </a>
+				</div>
+				<div class="section-paragraph-macro">@(Umbraco.Truncate(item.GetPropertyValue<string>("firtsParagraph"), 100))								
+				</div>							
+			</div>
+	</div>
+}
+
+@*{
+<div class="article">
+        <div class="articletitle"><a href="@item.Url">@item.Name</a></div>
+        <img src="@Umbraco.Field("noticeImage")">
+        <div class="articlepreview">@(Umbraco.Truncate(item.GetPropertyValue<string>("firtsParagraph"), 100)) 
+        <a href="@item.Url">Read More..</a></div>
+    </div>
+    <hr/>
+}
+
+
+				*@

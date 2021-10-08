@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ArticlesItem>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}<div class="pagemain" id="noticia">
+		<div class="flex-container">
+			<div class="flex-item">
+				<div class="Body-Notice">
+					<h2 class="notice-title">@Umbraco.Field("articleTitle")</h2>
+					<div class="imagen"><img src="@Umbraco.Media(Convert.ToString(@Umbraco.Field("noticeImage"))).umbracoFile" width="100%" height="100%"></div>
+					<div class="captionimage">Archivo | La Patria | 06 de Octubre de 2021</div>
+
+					<div class="paragraph">
+					    @Umbraco.Field("firtsParagraph")
+				        @Umbraco.Field("articleContents")
+				        <button class="btn" type="button"><a href="/articles/">Regresar</a></button>
+					</div>
+					
+			</div>			
+		</div>
+	</div>

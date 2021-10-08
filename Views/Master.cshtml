@@ -1,0 +1,77 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="/css/styless.css" type="text/css">
+
+	<script src="/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
+    	<div id="header-container">
+		<header class="wrapper clearfix">
+			<div class="navbar-logo">
+		  <a class="navbar-logo-link" href="/">
+			<img class="navbar-logo-default" src="/favicon.ico" alt="Intense" width="60px" height="60px"/></a></div>
+			  <nav class="nav">
+				  <ul class="navul">
+                    <li><a class="sh" href="/">Home </a></li>
+                    <li><a class="sh" href="/articles">News</a></li>
+                    <li><a class="sh" href="/contact-us">About Us</a></li>
+
+			  	</ul>
+			  </nav>
+		</header>
+	</div>
+	<hr>
+    @RenderBody()
+    <div>
+		<hr></div>
+<div class="footer-container-general">
+		<div id="footer-container">
+			<footer class="wrapper">
+		    	<nav> 
+					<div class="flex-container-footer">
+						<div class="flex-item-footer orange">Site Links
+						<div class="container-container"><hr></div>
+							<a class="sh" href="/">Home </a><br>
+                            <a class="sh" href="/articles">News</a><br>
+                            <a class="sh" href="/contact-us">About Us</a><br>
+						</div>
+
+						<div class="flex-item-footer">Social Media<hr>
+							<a class="sh" href="https://twitter.com/juank_bass">Twitter</a><br>
+							<a class="sh" href="https://www.youtube.com/">Youtube</a><br>
+							<a class="sh" href="https://www.facebook.com/milo.lopez.946/">Facebook</a><br>
+						
+						</div>
+
+						<div class="flex-item-footer subscribe">Subscribe<hr>
+						    keep your self updated, Subscribe to our newsletter<br>
+                            <input type="email" placeholder="your email">
+						</div>
+			  	 	</div>				
+            	</nav>			
+			</footer>
+		</div>
+	</div>	
+	
+
+</body>
+</html>
+
+
+

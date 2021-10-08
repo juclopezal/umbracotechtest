@@ -1,0 +1,34 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.SimpleContentPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}<div class="pagemain" id="noticia">
+		<div class="flex-container">
+			<div class="flex-item">
+				<div class="Body-Notice">
+					<h2 class="notice-title">@Umbraco.Field("articleTitle")</h2>
+					<div class="imagen"><img src="@Umbraco.Media(Convert.ToString(@Umbraco.Field("photo"))).umbracoFile" width="100%" height="100%"></div>
+					<div class="captionimage">Juan Camilo López</div>
+
+					<div class="paragraph">
+					    @Umbraco.Field("bodyText")
+					</div>
+					<table class="tg">
+                        <thead>
+                          <tr>
+                            <th class="tg-0pky">Perfil</th>
+                            <th class="tg-0pky">Tareas</th>
+                            <th class="tg-0pky">FTE</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-0pky">Front-end</td>
+                            <td class="tg-0pky">Realizar el punto 2 de "Akademy – Umbraco Tech Test"</td>
+                            <td class="tg-0pky">Full Time</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                        			</div>			
+                        		</div>
+                        	</div>
